@@ -8,7 +8,7 @@ This system automatically monitors air quality at the district level in Bangkok.
 - **Transform:** Clean data, extract district names, handle missing values (NaN), and prepare the Data Schema using **Pandas**.
 - **Load:** Ingest data into a **PostgreSQL** database on **Supabase** using an Upsert mechanism to prevent data duplication (Idempotency).
 - **Automate:** Schedule automatic daily runs at 08:00 AM (ICT) via **GitHub Actions**.
-- **Visualize:** Connect the database to **Power BI** to build a Geographic Dashboard (Shape Map) and perform Trend Analysis.
+- **Visualize:** Connect the database to **Power BI** to build a Geographic Dashboard (Shape Map) and perform monitoring analytics.
 
 ## 🛠️ Tech Stack & Tools
 - **Language:** Python 3.10
@@ -22,9 +22,9 @@ This system automatically monitors air quality at the district level in Bangkok.
 ![BKK Air Quality Dashboard](powerbi/dash-1.png)
 
 - **Shape Map Visualization:** Heatmap displaying PM2.5 levels across all 50 districts in Bangkok.
-- **Top 10 Critical Zones:** Bar chart ranking the most critical areas with Dynamic Conditional Formatting (automatically turns red when exceeding the safety threshold).
-- **Weather Correlation:** Analysis of the relationship between PM2.5, temperature, and humidity.
-- **Time Series Trend:** Sparklines showing daily historical PM2.5 trends.
+- **Top 10 Critical Zones:** Bar chart ranking the most critical areas with Dynamic Conditional Formatting (automatically turns yellow/red when exceeding the safety threshold).
+- **Detailed Data Table:** Comprehensive data table summarizing district-level data with conditional formatting highlighting the maximum PM2.5 values.
+- **Overview Gauges:** Gauge charts tracking the Average and Maximum PM2.5 values across Bangkok.
 
 ## 📂 Project Structure
 ```text
